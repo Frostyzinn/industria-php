@@ -5,12 +5,14 @@ class Funcionario
     private $id;
     private $nome;
     private $cargo;
+    private $salario;
 
-    public function __construct($id, $nome, $cargo)
+    public function __construct($id, $nome, $cargo, $salario)
     {
         $this->id = $id;
         $this->nome = $nome;
         $this->cargo = $cargo;
+        $this->salario = $salario;
     }
 
     public function getId()
@@ -28,18 +30,13 @@ class Funcionario
         return $this->cargo;
     }
 
-    public function setId($id)
+    public function getSalario()
     {
-        $this->id = $id;
+        return $this->salario;
     }
 
-    public function setNome($nome)
+    public function setSalario($salario)
     {
-        $this->nome = $nome;
-    }
-
-    public function setCargo($cargo)
-    {
-        $this->cargo = $cargo;
+        $this->salario = $salario;
     }
 }
