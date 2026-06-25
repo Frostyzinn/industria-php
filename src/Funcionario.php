@@ -4,11 +4,13 @@ class Funcionario
 {
     private $id;
     private $nome;
+    private $cargo;
 
-    public function __construct($id, $nome)
+    public function __construct($id, $nome, $cargo)
     {
         $this->id = $id;
         $this->nome = $nome;
+        $this->cargo = $cargo;
     }
 
     public function getId()
@@ -21,6 +23,11 @@ class Funcionario
         return $this->nome;
     }
 
+    public function getCargo()
+    {
+        return $this->cargo;
+    }
+
     public function setId($id)
     {
         $this->id = $id;
@@ -29,5 +36,10 @@ class Funcionario
     public function setNome($nome)
     {
         $this->nome = $nome;
+    }
+
+    public function setCargo($cargo)
+    {
+        $this->cargo = $cargo;
     }
 }
